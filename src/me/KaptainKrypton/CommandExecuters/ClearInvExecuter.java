@@ -1,5 +1,6 @@
 package me.KaptainKrypton.CommandExecuters;
 
+import org.bukkit.Bukkit;
 import org.bukkit.ChatColor;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;
@@ -12,6 +13,7 @@ public class ClearInvExecuter  implements CommandExecutor{
 		if(cmd.getName().equalsIgnoreCase("clearinv")){
 					player.sendMessage(ChatColor.DARK_RED + "[CoreCraft]" + ChatColor.DARK_GREEN + " Your inventory is being cleared!");
 					player.getInventory().clear();
+					Bukkit.reload();
 					player.sendMessage(ChatColor.DARK_RED + "[CoreCraft]" + ChatColor.DARK_GREEN + " Your inventory has been cleared!");
 					return true;
 				}

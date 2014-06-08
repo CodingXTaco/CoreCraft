@@ -2,6 +2,7 @@ package me.KaptainKrypton.CoreCraft;
 
 import java.util.logging.Logger;
 
+import me.KaptainKrypton.CommandExecuters.ClearInvExecuter;
 import me.KaptainKrypton.CommandExecuters.FeedExecuter;
 import me.KaptainKrypton.CommandExecuters.HealExecuter;
 import me.KaptainKrypton.CommandExecuters.HideMeExecuter;
@@ -46,6 +47,7 @@ public class CoreCraft extends JavaPlugin implements Listener{
 		this.getCommand("CoreCraft").setExecutor(new VerifyExecuter());
 		this.getCommand("Feed").setExecutor(new FeedExecuter());
 		this.getCommand("Time").setExecutor(new TimeExecuter());
+		this.getCommand("ClarInv").setExecutor(new ClearInvExecuter());
 		this.saveDefaultConfig();
 	}
 	@EventHandler
